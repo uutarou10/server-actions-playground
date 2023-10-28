@@ -11,8 +11,8 @@ export default function Form({ onSubmit }: Props) {
   const router = useRouter()
   const _onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log('called onSubmit function', e.target.text.value)
-    onSubmit(e.target.text.value)
+    console.log('called onSubmit function', e.currentTarget.text.value)
+    onSubmit(e.currentTarget.text.value)
     router.refresh()
   }
   return (
